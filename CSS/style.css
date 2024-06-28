@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+i {
+    color: #203C6C;
+}
+
+.Custom-Margin {
+    margin-top: 20px;
+}
+
+.Active {
+    color: #203C6C;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Menu-Icon {
+    font-size: 1.5rem;
+    display: none;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+header nav li a del {
+    text-decoration: line-through;
+}
+
+header nav li a:hover {
+    color: #203C6C;
+}
+
+header nav li a button {
+    background-color: #203C6C;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+header nav li a i {
+    color: #fff;
+}
+
+header nav li a {
+    position: relative;
+}
+
+header nav li a:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: #203C6C;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+header nav li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.NewFacilities {
+    text-align: center;
+    padding: 1% 0;
+    background-color: #f5f5f5;
+    letter-spacing: 0.1em;
+}
+
+.owl-dots {
+    display: none;
+}
+
+.IconicStudent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 1.1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 3% 5%;
+    background-color: #203C6C;
+    color: #fff;
+}
+
+.IconicStudent .Star {
+    width: 20em;
+    text-align: center;
+}
+
+.IconicStudent .Star figcaption {
+    padding: 10px;
+}
+
+.IconicStudent .Star figure img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.SchoolInfo {
+    padding: 0 5%;
+}
+
+.SchoolInfo h3 {
+    color: #203C6C;
+}
+
+.Answer {
+    background-color: #f5f5f5;
+    padding: 15px 5%;
+}
+
+.OurFacilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 1.1rem;
+    justify-items: center;
+    padding: 0 5%;
+}
+
+.OurFacilities .Facilities {
+    text-align: center;
+    width: 20em;
+    padding: 10%;
+    border: 1px solid #c8c8c8;
+    border-radius: 7px;
+}
+
+.OurFacilities .Facilities i {
+    font-size: 2rem;
+}
+
+.OurFacilities .Facilities p {
+    padding: 20px 0;
+}
+
+.Topic {
+    padding: 0 5%;
+    color: #203C6C;
+}
+
+.Gallery {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.Gallery-col-2 {
+    grid-column: span 2;
+}
+.Gallery-row-2 {
+    grid-row: span 2;
+}
+
+.Gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px){
+    .Gallery {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
+
+footer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 4% 0;
+}
+
+footer .SocialIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+@media (max-width : 600px) {
+
+    header nav ul {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: #f5f5f5;
+        gap: 0;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+    header nav ul li {
+        padding: 20px;
+        display: block;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    header nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .Menu-Icon {
+        display: block;
+    }
+
+    #menuList {
+        transition: all 0.3s ease;
+    }
+
+    .NewFacilities {
+        text-align: center;
+        padding: 1% 0;
+        background-color: #f5f5f5;
+        font-size: 11px;
+    }
+
+    .IconicStudent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.1rem;
+        justify-items: center;
+        align-items: center;
+        padding: 3% 5%;
+        background-color: #203C6C;
+        color: #fff;
+    }
+
+    .IconicStudent .Star {
+        width: 10em;
+        text-align: center;
+    }
+
+    .Answer p {
+        font-size: 12px;
+    }
+
+    .SchoolInfo h3 {
+        font-size: 1rem;
+    }
+
+    .SchoolInfo p {
+        font-size: 12px;
+    }
+
+    .OurFacilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .OurFacilities .Facilities {
+        width: 10em;
+    }
+
+    .NoImage {
+        display: none;
+    }
+    
+    footer {
+        font-size: 10px;
+        padding: 2%;
+    }
+
+    footer .SocialIcon {
+        font-size: 15px;
+    }
+}
+
+@media (min-width : 600px) and (max-width : 768px) {}
+
+@media (min-width : 768px) and (max-width : 1024px) {}
+
+@media (min-width : 1025px) and (max-width : 1200px) {}
+
+@media (min-width : 1201px) {}

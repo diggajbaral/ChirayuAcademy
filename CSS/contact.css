@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+i {
+    color: #203C6C;
+}
+
+.Custom-Margin {
+    margin-top: 20px;
+}
+
+.Active {
+    color: #203C6C;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+header nav li a del {
+    text-decoration: line-through;
+}
+
+header nav li a:hover {
+    color: #203C6C;
+}
+
+header nav li a button {
+    background-color: #203C6C;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+header nav li a {
+    position: relative;
+}
+
+header nav li a:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: #203C6C;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+header nav li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+header nav li a i {
+    color: #fff;
+}
+
+.Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 1.1rem;
+    margin: 30px;
+    justify-items: center;
+    align-items: center;
+    padding: 3% 5%;
+    background-color: #203C6C;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.Container iframe {
+    width: 40em;
+}
+
+.Container .ContactDetails h2 {
+    padding: 20px 0;
+}
+
+footer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 4% 0;
+}
+
+footer .SocialIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+@media (max-width : 600px) {
+
+    .Container {
+        padding: 2%;
+        overflow: hidden;
+    }
+
+    .Container iframe {
+        width: 19em;
+    }
+
+    .Container .ContactDetails h2 {
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    footer {
+        font-size: 10px;
+        padding: 2%;
+    }
+
+    footer .SocialIcon {
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width : 600px) and (max-width : 768px) {}
+
+@media (min-width : 768px) and (max-width : 1024px) {}
+
+@media (min-width : 1025px) and (max-width : 1200px) {}
+
+@media (min-width : 1201px) {}

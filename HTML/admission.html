@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <title>Chirayu Academy : Admission</title>
+  <link rel="stylesheet" href="../CSS/admission.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="Logo">
+        <a href="index.html">Chirayu Education Academy</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><del>HOME</del> School</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="contact.html" class="Active">Contact</a></li>
+            <li><a href="#"><button><i class="fa-solid fa-download"></i> Notice</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+  <div class="Admission">
+    <h3 class="Topic Custom-Margin">CHIRAYU ONLINE STUDENT REGISTRATION FORM</h3>
+  <form action="#" method="POST" class="Custom-Margin">
+    <div class="form-container">
+      <div class="form-group">
+        <label for="First_Name">FIRST NAME</label>
+        <input type="text" id="First_Name" name="First_Name" maxlength="30" required/>
+        <small>(max 30 characters a-z and A-Z)</small>
+      </div>
+      <div class="form-group">
+        <label for="Last_Name">LAST NAME</label>
+        <input type="text" id="Last_Name" name="Last_Name" maxlength="30" required />
+        <small>(max 30 characters a-z and A-Z)</small>
+      </div>
+      <div class="form-group">
+        <label for="Birthday_Day">DATE OF BIRTH</label>
+        <div class="dob-selects">
+          <select name="Birthday_Day" id="Birthday_Day" class="dob-select" required>
+            <option value="-1">Day:</option>
+          </select>
+          <select id="Birthday_Month" name="Birthday_Month" class="dob-select" required>
+            <option value="-1">Month:</option>
+            <option value="January">Jan</option>
+            <option value="February">Feb</option>
+            <option value="March">Mar</option>
+            <option value="April">Apr</option>
+            <option value="May">May</option>
+            <option value="June">Jun</option>
+            <option value="July">Jul</option>
+            <option value="August">Aug</option>
+            <option value="September">Sep</option>
+            <option value="October">Oct</option>
+            <option value="November">Nov</option>
+            <option value="December">Dec</option>
+          </select>
+          <select name="Birthday_Year" id="Birthday_Year" class="dob-select" required>
+            <option value="-1">Year:</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Email_Id">EMAIL ID</label>
+        <input type="text" id="Email_Id" name="Email_Id" maxlength="100" required/>
+      </div>
+      <div class="form-group">
+        <label for="Country">COUNTRY</label>
+        <input type="text" id="Country" name="Country" value="Nepal" readonly="readonly" required/>
+      </div>
+      <div class="form-group">
+        <label for="City">CITY</label>
+        <input type="text" id="City" name="City" maxlength="30" required/>
+        <small>(max 30 characters a-z and A-Z)</small>
+      </div>
+      <div class="form-group">
+        <label for="Class">CLASS</label>
+        <select name="Class" id="Class">
+          <option value="1">Play Group</option>
+          <option value="2">Nursery</option>
+          <option value="3">L K G</option>
+          <option value="4">U K G</option>
+          <option value="1">Class 01</option>
+          <option value="2">Class 02</option>
+          <option value="3">Class 03</option>
+          <option value="4">Class 04</option>
+          <option value="1">Class 05</option>
+          <option value="2">Class 06</option>
+          <option value="3">Class 07</option>
+          <option value="4">Class 08</option>
+          <option value="1">Class 09</option>
+          <option value="2">Class 10</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Mobile_Number">MOBILE NUMBER</label>
+        <input type="text" id="Mobile_Number" name="Mobile_Number" maxlength="10" required/>
+        <small>(10 digit number)</small>
+      </div>
+      <div class="form-group">
+        <label for="Father_Full_Name">Father's Full Name</label>
+        <input type="text" id="Father_Full_Name" name="Father_Full_Name" maxlength="50" required/>
+        <label for="Father_Number"></label>
+        <input type="text" id="Father_Number" name="Father_Number" maxlength="10"  placeholder="Father's Phone Number" required />
+      </div>
+      <div class="form-group">
+        <label for="Mother_Full_Name">Mother's Full Name</label>
+        <input type="text" id="Mother_Full_Name" name="Mother_Full_Name" maxlength="50" required/>
+        <label for="Mother_Number"></label>
+        <input type="text" id="Mother_Number" name="Mother_Number" maxlength="10" placeholder="Mother's Phone Number" required/>
+      </div>
+      <div class="form-group">
+        <label for="Address">ADDRESS</label>
+        <textarea id="Address" name="Address" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>GENDER</label>
+        <div>
+          Male <input type="radio" name="Gender" value="Male" required/>
+          Female <input type="radio" name="Gender" value="Female" required/>
+        </div>
+      </div>
+      <div class="form-group submit-group">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </div>
+  </form>
+  </div>
+
+  <script>
+    // Populate the day dropdown
+    const daySelect = document.getElementById('Birthday_Day');
+    for (let i = 1; i <= 31; i++) {
+      let option = document.createElement('option');
+      option.value = i;
+      option.textContent = i;
+      daySelect.appendChild(option);
+    }
+
+    // Populate the year dropdown
+    const yearSelect = document.getElementById('Birthday_Year');
+    const currentYear = new Date().getFullYear();
+    const startYear = 1980;
+    for (let i = startYear; i <= currentYear; i++) {
+      let option = document.createElement('option');
+      option.value = i;
+      option.textContent = i;
+      yearSelect.appendChild(option);
+    }
+  </script>
+
+<footer class="Custom-Margin">
+
+  <div class="SocialIcon">
+      <p>Follow Us :</p>
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+  <div class="Location Custom-Margin"><p>Sankharapur Municipality - 9 Indrayani, Kathmandu, Nepal</p></div>
+  <div class="CopyRight Custom-Margin"><p>
+      © 2024 Chirayu Education Academy. All rights reserved. Duplication or use without permission is prohibited.</p></div>
+
+
+</footer>
+
+</body>
+
+</html>
